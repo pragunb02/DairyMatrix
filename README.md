@@ -1,4 +1,4 @@
-# DBMS_Project
+# Py_DBMS_Project
 
 Building Dairy management system which is used to track inventory, including the type of product and quantity.
 
