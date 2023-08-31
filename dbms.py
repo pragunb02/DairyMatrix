@@ -71,9 +71,9 @@ def avail_w(wid , stock , pid):
 
 #connecting to database
 mydb = mysql.connector.connect(
-    host="siddhant-Inspiron-15-5518",
+    host="localhost",
     user="root",
-    password="@Karnal122112",
+    password="root",
     database="MoMilk"
 )
 
