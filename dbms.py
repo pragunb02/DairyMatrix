@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+import os
 import mysql.connector
 
 def login():
@@ -70,13 +72,16 @@ def avail_w(wid , stock , pid):
         return False
 
 #connecting to database
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="MoMilk"
-)
+# Load environment variables from .env file
+load_dotenv()
 
+# Access environment variables
+mydb = mysql.connector.connect(
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
+)
 
 #The cursor object acts as a handle or pointer to the result set of a query, 
 # allowing to perform operations on the database
